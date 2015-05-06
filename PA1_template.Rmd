@@ -10,6 +10,7 @@ output:
 ```{r}
 unzip("activity.zip")
 dataset <- read.csv("activity.csv")
+dataset$date <- as.Date(dataset$date, format="%Y-%m-%d")
 ```
 
 
