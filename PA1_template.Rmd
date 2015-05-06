@@ -18,7 +18,11 @@ dataset$date <- as.Date(dataset$date, format="%Y-%m-%d")
 ## What is mean total number of steps taken per day?
 ```{r}
 library("plyr")
-number_of_steps_per_day <- ddply(dataset, .(date), summarize, sum(steps))
+total_steps_per_day <- ddply(dataset, .(date), summarize, sum(steps))
+names(total_steps_per_day) <- c("date", "steps")
+hist(total_steps_per_day$steps,
+     main = "Histogram of total steps per day",
+     xlab = "steps per day")
 ```
 
 
