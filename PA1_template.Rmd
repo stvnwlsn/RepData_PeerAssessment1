@@ -11,6 +11,9 @@ output:
 unzip("activity.zip")
 dataset <- read.csv("activity.csv")
 dataset$date <- as.Date(dataset$date, format="%Y-%m-%d")
+
+library("plyr")
+number_of_steps_per_day <- ddply(dataset, .(date), summarize, sum(steps))
 ```
 
 
