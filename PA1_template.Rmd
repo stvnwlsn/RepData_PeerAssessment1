@@ -47,7 +47,9 @@ average_steps_across_intervals$interval[max_average_location]
 
 
 ## Imputing missing values
-
-
+```{r}
+# Total number of missing values
+sum(is.na(dataset$steps))
+```
 
 ## Are there differences in activity patterns between weekdays and weekends?
