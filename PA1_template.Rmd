@@ -23,6 +23,8 @@ names(total_steps_per_day) <- c("date", "steps")
 hist(total_steps_per_day$steps,
      main = "Histogram of total steps per day",
      xlab = "steps per day")
+mean(total_steps_per_day$steps, na.rm = TRUE)
+median(total_steps_per_day$steps, na.rm = TRUE)
 ```
 
 
