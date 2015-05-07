@@ -38,6 +38,10 @@ plot(average_steps_across_intervals$interval,
      main = "Average steps taken across all days",
      xlab = "5-minute interval",
      ylab = "average steps taken")
+
+# Calculate 5-minute interval with maximum number of average steps
+max_average_location <- which.max(average_steps_across_intervals$average_steps)
+average_steps_across_intervals$interval[max_average_location]
 ```
 
 
